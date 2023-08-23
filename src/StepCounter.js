@@ -2,17 +2,13 @@ import { useState } from "react";
 
 const StepCounter = () => {
   const [hide, setHide] = useState(false);
-  const [step, setStep] = useState(1);
+  const [step, setStep] = useState(4);
   const [counter, setCounter] = useState(0);
 
   const inpoEle = document.getElementById("inpt");
 
   function toggle() {
     setHide(!hide);
-  }
-  function changeStep() {
-    setStep(3);
-    // inpoEle.value = "";
   }
   function inc() {
     setCounter(counter + step);
