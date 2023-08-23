@@ -23,11 +23,50 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
+a {
+  text-decoration: none;
+  color: white;
+  background-color: #282c34;
+  border: 2px solid #61dafb;
+  border-radius: 5px;
+  height: 10px;
+  width: 30px;
+  padding: 10px;
+  font-weight: 400;
+}
+.App-main {
+  height: 83vh;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #282c34;
+  color: white;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.counter {
+  padding-top: 80px;
+}
 .App-link {
   color: #61dafb;
 }
-
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #61dafb;
+  margin-top: 10px;
+  padding: 20px;
+}
+.options {
+  padding: 5px;
+  color: white;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +74,34 @@
   to {
     transform: rotate(360deg);
   }
+}
+.login {
+  border: 3px solid white;
+  background-color: #61dafb;
+  padding: 3px;
+}
+.Login-header {
+  border: 3px solid white;
+  padding: 3px;
+  margin: 3px;
+}
+.footer {
+  border: solid 13px black;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  padding-top: 26px;
+  padding-bottom: 12px;
+  align-items: end;
+  color: #282c34;
+  position: absolute;
+  top: inherit;
+  width: 100vw;
+}
+.options a:hover {
+  color: #282c34;
+  background-color: white;
+  border: 4px solid white;
+  font-size: large;
+  font-weight: 400;
 }
