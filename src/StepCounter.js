@@ -24,9 +24,7 @@ const StepCounter = () => {
     setCounter(0);
   }
   return (
-    <div class="Stepcounter">
-      {step}
-
+    <div className="Stepcounter">
       {hide ? "" : <h3>Assignment 1</h3>}
       <br />
       <button onClick={toggle}>Hide/Show heading</button>
