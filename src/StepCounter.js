@@ -23,13 +23,21 @@ const StepCounter = () => {
     <div className="Stepcounter">
       {hide ? "" : <h3>Assignment 1</h3>}
       <br />
-      <button onClick={toggle}>Hide/Show heading</button>
+      <button onClick={toggle} className="btn">
+        <b>Hide/Show heading</b>
+      </button>
       <br />
       <h3>Step :{step}</h3>
       <h3>Counter:{counter}</h3>
-      <button onClick={inc}>Increase by Step</button>
-      <button onClick={dec}>Decrease by Step</button>
-      <button onClick={reset}>Reset</button>
+      <button onClick={inc} className="btn">
+        <b>Increase by Step</b>
+      </button>
+      <button onClick={dec} className="btn">
+        <b>Decrease by Step</b>
+      </button>
+      <button onClick={reset} className="btn">
+        <b>Reset</b>
+      </button>
     </div>
   );
 };

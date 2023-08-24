@@ -40,8 +40,9 @@ export default () => {
         {tasks.map((t, indx) => (
           <div className="todo-items">
             <div className="todo-todo-item"> {t}</div>
+
             <button
-              className="btn-del"
+              className="del"
               onClick={() => {
                 deleteTodo(indx);
               }}

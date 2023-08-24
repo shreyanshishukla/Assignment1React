@@ -124,7 +124,7 @@ a {
   align-items: end;
   color: #282c34;
   position: absolute;
-  top: inherit;
+  top: 90vh;
   width: 100vw;
 }
 .options a:hover {
@@ -165,12 +165,12 @@ a {
   height: 40px;
   font-size: large;
 }
-.btn-del:nth-of-type(even) {
+.del:nth-of-type(even) {
   border-radius: 5px;
   border: solid 4px #61dafb;
   background-color: white;
 }
-.btn-del:nth-of-type(odd) {
+.del:nth-of-type(odd) {
   border-radius: 5px;
   border: solid 4px #b73d80;
   background-color: white;
@@ -181,7 +181,43 @@ a {
   justify-content: center;
   align-items: center;
   background-color: #a5d677;
+  padding-bottom: 70px;
 }
 .todoh1 {
   color: #04212e;
+}
+.stu {
+  margin-top: 5px;
+}
+.menuname {
+  font-size: large;
+  font-weight: 700;
+  color: #04212e;
+}
+.btn:active {
+  border: 4px #26366a solid;
+}
+.BTN {
+  padding: 10px;
+}
+.ecomdatalist {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  margin: 10px;
+  flex-wrap: wrap;
+}
+.ecomdata {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 8px;
+  background-color: #b4d7e6;
+  width: max-content;
+  padding: 10px;
+}
+.ecomdata h2 {
+  margin: 5px;
 }
