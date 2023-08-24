@@ -10,6 +10,7 @@ export default () => {
   const addTodo = (event) => {
     event.preventDefault();
     setTasks([...tasks, event.target.todo.value]);
+    event.target.todo.value = "";
   };
   const deleteTodo = (indx) => {
     setTasks(tasks.filter((v, i) => i != indx));

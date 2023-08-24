@@ -5,8 +5,11 @@ import IconButton from "@mui/material/IconButton";
 import DeleteIcon from "@mui/icons-material/Delete";
 import AddIcon from "@mui/icons-material/Add";
 import Card from "@mui/material/Card";
+import Icon from "@mui/material/Icon";
 
 export default () => {
+  const [Promptdiv, setPromptdiv] = useState(false);
+
   const [product, setProduct] = useState([
     {
       available: "yes",
@@ -40,7 +43,6 @@ export default () => {
 
   const addProd = (event) => {
     event.preventDefault();
-
     const newprod = [
       ...product,
       {
@@ -55,11 +57,14 @@ export default () => {
     setProduct(product.filter((p, i) => i != indx));
   };
   const clearAll = () => {
-    setProduct([]);
+    {
+      setProduct([]);
+    }
   };
   return (
     <div className="ecom">
       <div className="ecom-form">
+        <br />
         <form onSubmit={addProd}>
           <TextField
             id="standard-textarea"
@@ -94,12 +99,19 @@ export default () => {
             className="BTN"
             type="submit"
           >
-            <AddIcon />
+            <AddIcon color="primary" />
           </IconButton>
         </form>
       </div>
       <br />
-      <Button onClick={clearAll} variant="contained" className="BTN">
+
+      <Button
+        onClick={clearAll}
+        variant="contained"
+        className="BTN"
+        id="clear-btn"
+        disabled={product.length == 0}
+      >
         Clear All
       </Button>
       <br />
@@ -107,16 +119,11 @@ export default () => {
         {product.map((p, indx) => {
           return (
             <div className="ecomdata">
-              <h2> {p.prod} </h2>
-              <br />
-              <h3>{p.price}</h3>
-              <br />
-              <br />
-              <br />
-              <br />
-
-              <h4> {p.available}</h4>
-              <br />
+              <div>
+                <h2>{p.prod}</h2>
+                <h4>Price:{p.price}</h4>
+                <p className="text">Currently available :{p.available}</p>
+              </div>
 
               <IconButton
                 aria-label="delete"
@@ -126,7 +133,7 @@ export default () => {
                 }}
                 className="BTN"
               >
-                <DeleteIcon color="#b4d7e6" />
+                <DeleteIcon color="primary" />
               </IconButton>
             </div>
           );
