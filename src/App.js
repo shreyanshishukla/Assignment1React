@@ -8,11 +8,15 @@ import Counter from "./Counter";
 import ClassCounter from "./ClassBasedCounter";
 import { useState } from "react";
 import StepCounter from "./StepCounter";
+import Student from "./Student";
+import Todo from "./Todo";
 function App() {
   const [show, setShow] = useState(false);
   const hide = () => {
     setShow(!show);
   };
+  const students = ["apoorva", "kamran", "nidhi", "sana", "shreyanshi"];
+
   return (
     <div className="App">
       <Menu />
@@ -25,6 +29,14 @@ function App() {
       {show ? "" : <ClassCounter />}
       <hr />
       <StepCounter />
+      <hr />
+      <Student students={students} />
+      <hr />
+      <Todo />
+      <br />
+      <br />
+      <br />
+
       {/* <Login />
        */}
     </div>

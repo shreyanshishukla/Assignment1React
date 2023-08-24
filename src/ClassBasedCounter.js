@@ -10,6 +10,7 @@ class Counter extends Component {
   }
   decrease = () => {
     this.setState({ count: this.state.count - 1 });
+    console.log(this);
   };
   show() {
     alert(this.state.count);
