@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 
 export default function Menu({ day, menus }) {
-  console.log("menuss", day, menus);
   return (
     <div className="menu">
       <div className="menuname">{day}</div>

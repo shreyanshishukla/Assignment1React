@@ -5,6 +5,7 @@ const Counter = () => {
 
   const increase = () => {
     setCount(count + 1);
+    console.log("state chnged");
   };
   const decrease = () => {
     setCount(count - 1);

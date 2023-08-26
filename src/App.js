@@ -1,19 +1,23 @@
 import logo from "./logo.svg";
 import "./App.css";
-import Login from "./Login";
-import Menu from "./Menu";
+import Login from "./Login/Login";
+import Menu from "./Menu/Menu";
 import Appmain from "./Appmain";
-import Footer from "./Footer";
-import Counter from "./Counter";
-import ClassCounter from "./ClassBasedCounter";
+import Footer from "./Footer/Footer";
+import Counter from "./Counter/Counter";
+import ClassCounter from "./ClassBasedCounter/ClassBasedCounter";
 import { useState } from "react";
-import StepCounter from "./StepCounter";
-import Student from "./Student";
-import Todo from "./Todo";
+import StepCounter from "./StepCounter/StepCounter";
+import Student from "./Student/Student";
+import Todo from "./Todos/Todo";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./Home";
-import TodoMUI from "./TodoMUI";
-import Ecommerce from "./Ecommerce";
+import Home from "./Home/Home";
+import TodoMUI from "../src/MUI/TodoMUI";
+import Ecommerce from "./Ecommerce/Ecommerce";
+import Pokemon from "./Pokemon/Pokemon";
+import UseRef from "./UseRef/UseRef";
+import ReduxCounter from "./ReduxCounter/ReduxCounter";
+import EmployeeApp from "./EmployeeApp/EmployeeApp";
 function App() {
   const students = ["apoorva", "kamran", "nidhi", "sana", "shreyanshi"];
 
@@ -32,6 +36,10 @@ function App() {
           ]}
         />
         <Menu day={"Day-2"} menus={["Todos", "Students", "MUI", "Ecommerce"]} />
+        <Menu
+          day={"Day-3"}
+          menus={["Pokemon", "UseRef", "ReduxCounter", "EmployeeApp"]}
+        />
 
         <Routes>
           <Route exact path="/todos" element={<Todo />} />
@@ -55,6 +63,10 @@ function App() {
           <Route exact path="/Class-based-counter" element={<ClassCounter />} />
           <Route exact path="/MUI" element={<TodoMUI />} />
           <Route exact path="/Ecommerce" element={<Ecommerce />} />
+          <Route exact path="/Pokemon" element={<Pokemon />} />
+          <Route exact path="/UseRef" element={<UseRef />} />
+          <Route exact path="/ReduxCounter" element={<ReduxCounter />} />
+          <Route exact path="/EmployeeApp" element={<EmployeeApp />} />
         </Routes>
 
         <Footer />
