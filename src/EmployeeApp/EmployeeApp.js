@@ -72,12 +72,18 @@ export default () => {
           All Employees Deleted
         </Alert>
       </Snackbar>
-
-      <h1>Employee Application</h1>
-      <EmployeeAddForm addEmp={addEmp} />
-      <Button onClick={clearAll} variant="contained" className="BTN">
-        Clear All
-      </Button>
+      <div className="emp-form-div">
+        <h1>Employee Application</h1>
+        <EmployeeAddForm addEmp={addEmp} />
+        <Button
+          onClick={clearAll}
+          variant="contained"
+          className="BTN"
+          disabled={empData.length == 0}
+        >
+          Clear All
+        </Button>
+      </div>
       <EmployeeList empData={empData} delEmp={delEmp} />
     </>
   );

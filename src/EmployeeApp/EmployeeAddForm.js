@@ -5,7 +5,7 @@ import Box from "@mui/material/Box";
 
 export default ({ addEmp }) => {
   return (
-    <form onSubmit={addEmp}>
+    <form onSubmit={addEmp} className="empform">
       <br />
       <div className="formdatainput">
         <label for="name">Name of the Employee</label>
@@ -16,6 +16,9 @@ export default ({ addEmp }) => {
           multiline
           variant="standard"
           name="name"
+          sx={{
+            marginLeft: "10px",
+          }}
           required
         />
         <br />
@@ -30,6 +33,9 @@ export default ({ addEmp }) => {
           variant="standard"
           name="age"
           required
+          sx={{
+            marginLeft: "10px",
+          }}
         />
         <br />
       </div>
@@ -44,6 +50,9 @@ export default ({ addEmp }) => {
           variant="standard"
           name="salary"
           required
+          sx={{
+            marginLeft: "10px",
+          }}
         />
         <br />
       </div>
@@ -57,16 +66,25 @@ export default ({ addEmp }) => {
           variant="standard"
           name="city"
           required
+          sx={{
+            marginLeft: "10px",
+          }}
         />
         <br />
       </div>
       <IconButton
         aria-label="delete"
-        size="large"
+        size="larger"
         className="BTN"
         type="submit"
+        color="primary"
+        sx={{ margin: "10px" }}
       >
-        <AddIcon />
+        <AddIcon
+          sx={{
+            fontSize: "40px",
+          }}
+        />
       </IconButton>
     </form>
   );
