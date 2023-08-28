@@ -20,13 +20,20 @@ body {
 }
 .todo {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap-reverse;
+  margin-bottom: 300px;
 }
 .todo-items {
   margin: 4px;
   border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  align-items: center;
 }
 .todo-items:nth-child(even) {
   background-color: #be98b9;
@@ -36,6 +43,7 @@ body {
   padding: 5px;
   display: flex;
   width: max-content;
+  margin: 5px;
 }
 .todo-items:nth-child(odd) {
   background-color: #b4d7e6;
@@ -44,6 +52,7 @@ body {
   font-weight: 400;
   padding: 5px;
   display: flex;
+  margin: 5px;
 
   width: max-content;
 }

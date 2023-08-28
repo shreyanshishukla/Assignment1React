@@ -1,4 +1,8 @@
-import { createStore } from "redux";
-import countreducer, { initialState } from "../Reducers/countreducer";
-let store = createStore(countreducer);
+import { combineReducers, createStore } from "redux";
+import countreducer from "../Reducers/countreducer";
+import todoReducer from "../Reducers/todoreducer";
+
+let store = createStore(
+  combineReducers({ count: countreducer, todo: todoReducer })
+);
 export default store;
