@@ -23,35 +23,22 @@ export default ({ delEmp, indx, t }) => {
       />
       <br />
       <div className="emp-item">
-        {" "}
-        <span className="textEmp">
-          Employee:
-          {t.name}{" "}
-        </span>
+        <span className="textEmp">Employee: {t.name}</span>
       </div>
       <br />
       <div className="emp-item">
         {" "}
-        <span className="textEmp">
-          Age:
-          {t.age}
-        </span>
+        <span className="textEmp">Age: {t.age}</span>
       </div>
       <br />
       <div className="emp-item">
         {" "}
-        <span className="textEmp">
-          Salary:
-          {t.salary}
-        </span>
+        <span className="textEmp">Salary: {t.salary}</span>
       </div>
       <br />
       <div className="todo-todo-item">
         {" "}
-        <span className="textEmp">
-          City:
-          {t.city}
-        </span>
+        <span className="textEmp">City: {t.city}</span>
       </div>
       <br />
       <div className="emp-item">

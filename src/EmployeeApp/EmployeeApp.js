@@ -7,16 +7,21 @@ import MuiAlert from "@mui/material/Alert";
 import axios from "axios";
 import Stack from "@mui/material/Stack";
 import Box from "@mui/material/Box";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  FetchEmpAction,
+  saveEmpAction,
+  deleteEmpAction,
+  deleteAllEmpAction,
+} from "../actions/EmpAction";
 export default () => {
-  const [empData, setEmpData] = useState([]);
   const [open, setOpen] = useState(0);
+  const empData = useSelector((state) => state.emp);
 
+  const dispatcher = useDispatch();
   useEffect(() => {
-    getEmpData();
+    dispatcher(FetchEmpAction());
   }, []);
-  const getEmpData = () => {
-    axios.get("/employee").then((data) => setEmpData(data.data));
-  };
 
   const handleClick = () => {
     setOpen(1);
@@ -29,26 +34,24 @@ export default () => {
 
     setOpen(0);
   };
-  const addEmp = async (event) => {
+  const addEmp = (event) => {
     event.preventDefault();
-    await axios.post("/employee", {
+    const payload = {
       name: event.target.name.value,
       age: event.target.age.value,
       salary: event.target.salary.value,
       city: event.target.city.value,
-    });
-    getEmpData();
+    };
+    dispatcher(saveEmpAction(payload));
     handleClick();
   };
 
-  const delEmp = async (indx) => {
-    await axios.delete(`/employee/${indx}`);
-    getEmpData();
+  const delEmp = (indx) => {
+    dispatcher(deleteEmpAction(indx));
     setOpen(2);
   };
   const clearAll = async () => {
-    await axios.delete("/deleteemployee");
-    getEmpData();
+    dispatcher(deleteAllEmpAction());
     setOpen(3);
   };
   const Alert = forwardRef(function Alert(props, ref) {

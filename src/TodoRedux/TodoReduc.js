@@ -1,6 +1,12 @@
 import { useDispatch, useSelector } from "react-redux";
-import { addTodo, delTodo, deleteAll } from "../actions/todoactions";
-import store from "../Store/Store";
+import {
+  postAction,
+  deleteAction,
+  deleteAll,
+  fetchAction,
+  deleteAllAction,
+} from "../actions/todoactions";
+import { useEffect } from "react";
 
 export default () => {
   const todostate = useSelector((state) => {
@@ -8,21 +14,27 @@ export default () => {
   });
 
   const dispatcher = useDispatch();
-  console.log("store ", store);
   const addTodos = (event) => {
     event.preventDefault();
     const payload = {
-      task: event.target.task.value,
+      name: event.target.task.value,
       status: event.target.status.value,
     };
-    dispatcher(addTodo(payload));
+    dispatcher(postAction(payload));
+  };
+  const fetchall = () => {
+    dispatcher(fetchAction());
   };
   const deleTodo = (indx) => {
-    dispatcher(delTodo({ indx }));
+    dispatcher(deleteAction({ indx }));
   };
   const clearAll = () => {
-    dispatcher(deleteAll());
+    dispatcher(deleteAllAction());
   };
+
+  useEffect(() => {
+    dispatcher(fetchAction());
+  }, []);
   return (
     <div>
       Redux Todos
@@ -34,11 +46,14 @@ export default () => {
       <button onClick={clearAll} className="btn">
         Clear All
       </button>
+      <button onClick={fetchall} className="btn">
+        Fetch
+      </button>
       <div className="todo">
         {todostate.map((t, indx) => (
           <div className="todo-items">
             <div className="todo-todo-item">
-              task: {t.task}
+              task: {t.name}
               <br />
               status:{t.status}
               <br />

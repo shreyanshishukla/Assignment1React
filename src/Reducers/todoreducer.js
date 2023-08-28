@@ -1,13 +1,4 @@
-const initialState = [
-  {
-    task: "have coffee",
-    status: "pending",
-  },
-  {
-    task: "drink water",
-    status: "pending",
-  },
-];
+const initialState = [];
 
 export default (state = initialState, action) => {
   switch (action.type) {
@@ -17,6 +8,8 @@ export default (state = initialState, action) => {
       return state.filter((v, indx) => indx != action.payload.indx);
     case "delAll":
       return [];
+    case "fetchTodos":
+      return action.payload;
     default:
       return state;
   }

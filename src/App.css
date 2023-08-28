@@ -11,7 +11,8 @@ body {
 .textEmp {
   font-size: large;
   font-weight: 600;
-  font-family: Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -316,14 +317,18 @@ label {
   padding-right: 20px;
   padding-top: 10px;
   background-color: #04212e;
-
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   color: aliceblue;
+  border-radius: 9px;
 }
 .emp-item {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 .emp-items:hover {
   display: flex;
@@ -351,4 +356,10 @@ label {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.emp-form-div h1 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: larger;
+  font-weight: 800;
 }
