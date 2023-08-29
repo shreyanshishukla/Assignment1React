@@ -19,6 +19,7 @@ import UseRef from "./UseRef/UseRef";
 import ReduxCounter from "./ReduxCounter/ReduxCounter";
 import EmployeeApp from "./EmployeeApp/EmployeeApp";
 import TodoReduc from "./TodoRedux/TodoReduc";
+import ExpenseTracker from "./ExpenseTracker/ExpenseTracker";
 function App() {
   const students = ["apoorva", "kamran", "nidhi", "sana", "shreyanshi"];
 
@@ -41,7 +42,7 @@ function App() {
           day={"Day-3"}
           menus={["Pokemon", "UseRef", "ReduxCounter", "EmployeeApp"]}
         />
-        <Menu day={"Day-4"} menus={["TodoRedux"]} />
+        <Menu day={"Day-4"} menus={["TodoRedux", "Expense-Tracker"]} />
         <Routes>
           <Route exact path="/todos" element={<Todo />} />
           <Route exact path="/" element={<Home />} />
@@ -69,6 +70,7 @@ function App() {
           <Route exact path="/ReduxCounter" element={<ReduxCounter />} />
           <Route exact path="/EmployeeApp" element={<EmployeeApp />} />
           <Route exact path="/TodoRedux" element={<TodoReduc />} />
+          <Route exact path="/Expense-Tracker" element={<ExpenseTracker />} />
         </Routes>
 
         <Footer />

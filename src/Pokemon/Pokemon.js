@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Grid from "@mui/material/Grid";
+import { Link } from "react-router-dom";
 
 export default () => {
   const [pokemondata, setPokemondata] = useState([]);
@@ -19,7 +20,7 @@ export default () => {
           return (
             <Grid item xs={6} md={4}>
               <div className="pokemon">
-                {/* <Link path="#"> {pokemon.name}</Link> */}
+                <Link path="#"> {pokemon.name}</Link>
               </div>
             </Grid>
           );

@@ -22,14 +22,13 @@ export default ({ delEmp, indx, t }) => {
         }}
       />
       <br />
+
       <div className="emp-item">
-        <span className="textEmp">Employee: {t.name}</span>
+        <span className="textEmp">
+          Employee: {t.name},{t.age}
+        </span>
       </div>
-      <br />
-      <div className="emp-item">
-        {" "}
-        <span className="textEmp">Age: {t.age}</span>
-      </div>
+
       <br />
       <div className="emp-item">
         {" "}
