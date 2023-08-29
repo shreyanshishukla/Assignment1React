@@ -20,6 +20,11 @@ import ReduxCounter from "./ReduxCounter/ReduxCounter";
 import EmployeeApp from "./EmployeeApp/EmployeeApp";
 import TodoReduc from "./TodoRedux/TodoReduc";
 import ExpenseTracker from "./ExpenseTracker/ExpenseTracker";
+import LazyHome from "./LazyLoading/LazyHome";
+import TodoForm from "./TodoForm";
+import TodoItem from "./Todos/Todo-item";
+import ForgotPassword from "./ForgotPassword";
+
 function App() {
   const students = ["apoorva", "kamran", "nidhi", "sana", "shreyanshi"];
 
@@ -43,6 +48,8 @@ function App() {
           menus={["Pokemon", "UseRef", "ReduxCounter", "EmployeeApp"]}
         />
         <Menu day={"Day-4"} menus={["TodoRedux", "Expense-Tracker"]} />
+        <Menu day={"Day-5"} menus={["LazyLoading", "Todoform", "Login"]} />
+
         <Routes>
           <Route exact path="/todos" element={<Todo />} />
           <Route exact path="/" element={<Home />} />
@@ -71,6 +78,11 @@ function App() {
           <Route exact path="/EmployeeApp" element={<EmployeeApp />} />
           <Route exact path="/TodoRedux" element={<TodoReduc />} />
           <Route exact path="/Expense-Tracker" element={<ExpenseTracker />} />
+          <Route exact path="/LazyLoading" element={<LazyHome />} />
+          <Route exact path="/Todoform" element={<TodoForm />} />
+          <Route exact path="/Login" element={<Login />}>
+            <Route exact path="forgotpassword" element={<ForgotPassword />} />
+          </Route>
         </Routes>
 
         <Footer />

@@ -2,6 +2,7 @@ import { useState } from "react";
 import Todoform from "./Todoform";
 import ClearTodoForm from "./ClearTodoForm";
 import Todoitem from "./Todo-item.js";
+import { useEffect } from "react";
 
 export default () => {
   const [tasks, setTasks] = useState([
@@ -17,6 +18,11 @@ export default () => {
   const clearAll = () => {
     setTasks([]);
   };
+  useEffect(() => {
+    return () => {
+      console.log("fired on unmounting");
+    };
+  }, []);
 
   return (
     <div className="todo-area">
