@@ -364,3 +364,16 @@ label {
   font-size: larger;
   font-weight: 800;
 }
+.newapp {
+  margin-bottom: 500px;
+}
+.description {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: larger;
+  font-weight: 700;
+}
+.active {
+  color: #b73d80;
+  background-color: #a5d677;
+}

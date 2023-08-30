@@ -23,7 +23,11 @@ import ExpenseTracker from "./ExpenseTracker/ExpenseTracker";
 import LazyHome from "./LazyLoading/LazyHome";
 import TodoForm from "./TodoForm";
 import TodoItem from "./Todos/Todo-item";
-import ForgotPassword from "./ForgotPassword";
+import ForgotPassword from "./Login/ForgotPassword";
+import Newsapp from "./Newsapp/Newsapp";
+import Update from "./Newsapp/Update";
+import CityData from "./Newsapp/CityData";
+import Description from "./Newsapp/Description";
 
 function App() {
   const students = ["apoorva", "kamran", "nidhi", "sana", "shreyanshi"];
@@ -49,6 +53,7 @@ function App() {
         />
         <Menu day={"Day-4"} menus={["TodoRedux", "Expense-Tracker"]} />
         <Menu day={"Day-5"} menus={["LazyLoading", "Todoform", "Login"]} />
+        <Menu day={"Day-6"} menus={["Newsapp", "Login"]} />
 
         <Routes>
           <Route exact path="/todos" element={<Todo />} />
@@ -82,6 +87,15 @@ function App() {
           <Route exact path="/Todoform" element={<TodoForm />} />
           <Route exact path="/Login" element={<Login />}>
             <Route exact path="forgotpassword" element={<ForgotPassword />} />
+          </Route>
+          <Route exact path="/Newsapp" element={<Newsapp />}>
+            <Route exact path=":index" element={<CityData />}>
+              <Route
+                exact
+                path="description/:id"
+                element={<Description />}
+              ></Route>
+            </Route>
           </Route>
         </Routes>
 
