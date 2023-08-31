@@ -25,7 +25,6 @@ import TodoForm from "./TodoForm";
 import TodoItem from "./Todos/Todo-item";
 import ForgotPassword from "./Login/ForgotPassword";
 import Newsapp from "./Newsapp/Newsapp";
-import Update from "./Newsapp/Update";
 import CityData from "./Newsapp/CityData";
 import Description from "./Newsapp/Description";
 
